@@ -1,43 +1,29 @@
-package day5;
-
-class employeeinfo
-{
-	int empId;
-	String name, dept;
-	double salary;
-	
-	void dispalyEmployeeInfo()
-	{
-		System.out.println("Id is "+ empId);
-		System.out.println("Name is "+ name);
-		System.out.println("Department is "+ dept);
-		System.out.println("Salary is "+ salary);
-	}
-	
-	String loan()
-	{
-	if(salary<75000)
-		return "You can apply for loan";
-	return "You cannot apply for loan";
-	}
-}
 
 public class Employee {
+String FirstName, LastName;
+	
+	public Employee(String firstName, String lastName) {
+		super();
+		FirstName = firstName;
+		LastName = lastName;
+		
+}
 
-	public static void main (String[] args) {
-		
-		employeeinfo ramesh= new employeeinfo();
-		ramesh.empId= 234567;
-		ramesh.name = "Ramesh";
-		ramesh.dept = "Developer";
-		ramesh.salary= 50000;
-		
-		ramesh.dispalyEmployeeInfo();
-		
-		
-		System.out.println(ramesh.loan());
+	@Override
+	public String toString() {
+		return "Employee [FirstName=" + FirstName + ", LastName=" + LastName + "]";
+	}
+
+	public static void main(String[] args) {
+
+		Employee e1= new Employee("Sachin","Tendulkar");
+		 Employee e2= new Employee("Rahul","Dravid");
+		 Employee e3= new Employee("Virat","Kohali");
+		 
+		 System.out.println(e1.toString());
+		 System.out.println(e2.toString());
+		 System.out.println(e3.toString());
 
 	}
 
 }
-
